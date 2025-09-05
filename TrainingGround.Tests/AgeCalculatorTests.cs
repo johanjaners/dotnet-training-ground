@@ -3,8 +3,18 @@
 public class AgeCalculatorTests
 {
     [Fact]
-    public void Someone_born_1995_is_30_in_2025()
+    public void Someone_born_1972_is_50_in_2022()
     {
+        
+        // arrange
+        var calculator = new AgeCalculator();
 
+        //act
+        var age = calculator.GetAge(1972, 2022);
+
+        //assert
+        Assert.Equal(50, age);
+        
+        //Assert.True(false);
     }
 }
