@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\TrainingGround.csproj": {}
+    "C:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\TrainingGround.csproj": {}
   },
   "projects": {
-    "c:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\TrainingGround.csproj": {
+    "C:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\TrainingGround.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\TrainingGround.csproj",
+        "projectUniqueName": "C:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\TrainingGround.csproj",
         "projectName": "TrainingGround",
-        "projectPath": "c:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\TrainingGround.csproj",
+        "projectPath": "C:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\TrainingGround.csproj",
         "packagesPath": "C:\\Users\\JanérsJohan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\obj\\",
+        "outputPath": "C:\\Users\\JanérsJohan\\salt\\precourse\\dotnet-trainingGround\\TrainingGround\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JanérsJohan\\AppData\\Roaming\\NuGet\\NuGet.Config"
