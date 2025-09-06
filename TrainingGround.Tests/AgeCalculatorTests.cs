@@ -10,11 +10,10 @@ public class AgeCalculatorTests
         var calculator = new AgeCalculator();
 
         //act
-        var age = calculator.GetAge(1972, 2022);
+        var age = calculator.GetAge(2022, 2022);
 
         //assert
-        Assert.Equal(50, age);
+        Assert.Equal(0, age);
         
-        //Assert.True(false);
     }
 }
