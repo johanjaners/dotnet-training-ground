@@ -1,30 +1,24 @@
 public class Person
 {
-
-
     private string? Name;
-    public string GetName
+    public string? Name
     {
-        return this.Name;
-    }
-
-
-
-
-    public string SetName(string nameToSet)
-    {
-        if (nameToSet.Length > 5)
+        get { return _name; }
+        set
         {
-            this.Name = nameToSet
+            if (value.Length > 5)
+            {
+                this - _name = value;
+            }
         }
     }
 
 
 
+
+
     public int birthYear;
     public double LengthInMeters;
-
-
 
     public Person() { }
     public Person(string name)
