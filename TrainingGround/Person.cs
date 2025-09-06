@@ -1,6 +1,6 @@
 public class Person
 {
-    public string? Name { get; set; }
+    public string? Name { get; private set; }
 
     public int birthYear;
     public double LengthInMeters;
