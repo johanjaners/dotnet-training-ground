@@ -2,12 +2,14 @@
 
 public class AgeCalculatorTests
 {
+    /*
     private AgeCalculator _calculator;
 
     public AgeCalculatorTests()
     {
         _calculator = new AgeCalculator();
     }
+    */
 
     [Fact]
     public void Someone_born_1972_is_50_in_2022()
