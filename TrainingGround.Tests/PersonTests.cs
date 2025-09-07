@@ -4,10 +4,22 @@ public class PersonTests
     public void Can_create_person_using_parameterless_constructor()
     {
         // arrange
-        var p = new Person();
-        p.birthYear = 1972;
+        var p = new Person("Marcus");
 
-        //
+        // assert
+        Assert.NotNull(p);
+        Assert.Equal("Marcus", p.Name);
+    }
+
+
+    [Fact]
+    public void A_person_born_1972_is_50_2022()
+    {
+        // arrange
+        var p = new Person();
+        p.BirthYear = 1972;
+
+        // act
         var age = p.GetAge(2022);
 
         // assert
