@@ -4,7 +4,7 @@ public class Person
     public Person() { }
 
     //------------------------ Name of Person--------------------------------
-    // Name property, set private
+    // Name property, set is private
     public string? Name { get; private set; }
     //Person name constructor
     public Person(string name)
@@ -12,17 +12,17 @@ public class Person
         this.Name = name;
     }
 
-    //--------------------- Birthyear // GetAge----------------------
-    //BirthYear property, set private
+    //--------------------- BirthYear // GetAge----------------------
+    //BirthYear property, set is private
     public int BirthYear { get; private set; }
 
-    // Person Birthyear contructor
+    // Person BirthYear contructor
     public Person(int birthYear)
     {
         this.BirthYear = birthYear;
     }
 
-    // GetAge Method
+    // GetAge Method using currentYear
     public int GetAge(int currentYear)
     {
         return currentYear - this.BirthYear;
