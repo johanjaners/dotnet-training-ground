@@ -2,7 +2,7 @@
 
 public class AgeCalculatorTests
 {
-    /*
+    /* previous _calculator field and constructor when using Instance method
     private AgeCalculator _calculator;
 
     public AgeCalculatorTests()
