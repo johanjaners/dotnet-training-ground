@@ -3,11 +3,14 @@ public class PersonTests
     [Fact]
     public void Can_create_person_using_parameterless_constructor()
     {
-        // act
-        var p = new Person("Marcus");
+        // arrange
+        var p = new Person();
+        p.birthYear = 1972;
+
+        //
+        var age = p.GetAge(2022);
 
         // assert
-        Assert.NotNull(p);
-        Assert.Equal("Marcus", p.Name);
+        Assert.Equal(50, age);
     }
 }
