@@ -29,5 +29,6 @@ public class Person
     }
 
     //----------------------Length--------------------
-    public double LengthInMeters;
+    // Length property, get set
+    public double LengthInMeters { get; set; }
 }
