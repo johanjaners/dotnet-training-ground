@@ -1,15 +1,14 @@
-
 public class Person
 {
     //Null is possible
     public Person() { }
-    // Name 
+    //------------------------ Name --------------------------------
     public string? Name { get; private set; }
     public Person(string name)
     {
         this.Name = name;
     }
-    // Birthyear // GetAge
+    //--------------------- Birthyear // GetAge----------------------
     public int BirthYear { get; private set; }
 
     public Person(int birthYear)
@@ -21,6 +20,6 @@ public class Person
     {
         return currentYear - this.BirthYear;
     }
-    //Length
+    //----------------------Length--------------------
     public double LengthInMeters;
 }

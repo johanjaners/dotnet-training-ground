@@ -24,4 +24,18 @@ public class PersonTests
         // assert
         Assert.Equal(50, age);
     }
+ 
+    [Fact]
+    public void A_person_born_1982_is_40_2022()
+    {
+        // arrange
+        var p = new Person(1982);
+
+        // act
+        var age = p.GetAge(2022);
+
+        // assert
+        Assert.Equal(40, age);
+    }
+
 }
