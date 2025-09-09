@@ -1,3 +1,6 @@
+using System.Net.Sockets;
+using TrainingGround;
+
 public class Person
 {
     //Null is possible
@@ -31,4 +34,8 @@ public class Person
     //----------------------Length--------------------
     // Length property, get set
     public double LengthInMeters { get; set; }
+
+
+    // ---COmposition : Person HAS An Adress
+    public Address? Address { get; set; }
 }
