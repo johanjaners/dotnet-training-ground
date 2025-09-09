@@ -1,6 +1,6 @@
 namespace TrainingGround
 {
-    public class Employee : Person
+    public class Employee : Person, IPrintable
     {
         public Employee() { }
         public Employee(string name, string employeeId) : base(name)
@@ -9,5 +9,10 @@ namespace TrainingGround
         }
     
         public string EmployeeId { get; set; }
+
+        public string GetPrintString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
