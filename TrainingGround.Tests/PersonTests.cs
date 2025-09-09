@@ -122,10 +122,3 @@ public class PersonTests
     */
 
 }
-
-internal class Address
-{
-    public Address()
-    {
-    }
-}
