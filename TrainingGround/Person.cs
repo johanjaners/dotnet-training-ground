@@ -1,9 +1,15 @@
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using TrainingGround;
 
-public class Person
+public class Person : IPrintable
 {
-    //Null is possible
+
+    
+
+
+
+    //Null is possible, constructor
     public Person() { }
 
     //------------------------ Name of Person--------------------------------
@@ -29,6 +35,14 @@ public class Person
     public int GetAge(int currentYear)
     {
         return currentYear - this.BirthYear;
+    }
+
+
+
+    //-----------------Implement IPrintable interface
+    public string GetPrintString()
+    {
+        return @$"{this.Name} {this.Address.Street} {this.Address.StreetNo} {this.Address.City}";
     }
 
     //----------------------Length--------------------
