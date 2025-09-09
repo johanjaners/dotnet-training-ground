@@ -12,7 +12,7 @@ namespace TrainingGround
 
         public string GetPrintString()
         {
-            throw new NotImplementedException();
+            return @$"{this.Name} ({this.EmployeeId}) {this.Address.Street} {this.Address.StreetNo} {this.Address.City}";
         }
     }
 }
