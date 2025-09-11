@@ -7,9 +7,6 @@ public enum AgeCategory
 
 public class AgeCalculator
 {
-
-
-
     public static int GetAge(int birthYear, int currentYear)
     {
         return currentYear - birthYear;
@@ -20,5 +17,4 @@ public class AgeCalculator
     {
         return AgeCategory.Kid;
     }
-
 }
