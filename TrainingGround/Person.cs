@@ -5,14 +5,9 @@ using TrainingGround;
 public class Person : IPrintable
 {
 
-    
-
-
-
     //Null is possible, constructor
     public Person() { }
 
-    //------------------------ Name of Person--------------------------------
     // Name property, set is private
     public string? Name { get; private set; }
     //Person name constructor
@@ -21,7 +16,6 @@ public class Person : IPrintable
         this.Name = name;
     }
 
-    //--------------------- BirthYear // GetAge----------------------
     //BirthYear property, set is private
     public int BirthYear { get; private set; }
 
@@ -37,18 +31,13 @@ public class Person : IPrintable
         return currentYear - this.BirthYear;
     }
 
-
-
-    //-----------------Implement IPrintable interface
     public string GetPrintString()
     {
         return @$"{this.Name} {this.Address.Street} {this.Address.StreetNo} {this.Address.City}";
     }
 
-    //----------------------Length--------------------
     // Length property, get set
     public double LengthInMeters { get; set; }
-
 
     // ---COmposition : Person HAS An Adress
     public Address Address { get; set; }
