@@ -26,4 +26,20 @@ public class AgeCalculator
 
         return AgeCategory.Adult;
     }
+
+    public static string GetAgeSpan(AgeCategory category)
+    {
+        switch (category)
+        {
+            case AgeCategory.Kid:
+                return "Under 18 years";
+            case AgeCategory.Adult:
+                return "Above 18";
+            case AgeCategory.Prime:
+                return "Exactly 50";
+            default:
+                return "Unknown";
+        }
+    }
+
 }
