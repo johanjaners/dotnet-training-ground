@@ -68,6 +68,28 @@ public class LoopTests
         }
     }
 
+    [Fact]
+    public void ForEachLoopOverAddresses()
+    {
+        // arrange
+        var addressList = new List<Address>();
+
+        addressList.Add(new Address() { Street = "street", StreetNo = 1 });
+        addressList.Add(new Address() { Street = "street", StreetNo = 2 });
+        addressList.Add(new Address() { Street = "street", StreetNo = 3 });
+
+        // act
+
+        foreach (Address address in addressList)
+        {
+            Console.WriteLine("'{ address.StreetNo}'");
+            
+            // act
+            Assert.IsType<Address>(address);
+        }
+
+    }
+
 }
 
 
