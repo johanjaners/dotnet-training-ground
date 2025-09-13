@@ -69,6 +69,8 @@ public class CollectionTests
         Assert.Equal(2, integerList[0]);
         Assert.Equal(3, integerList[1]);
     }
+
+    // example method (not used)
     public int GetLength<T>(List<T> list)
     {
         return list.Count;
