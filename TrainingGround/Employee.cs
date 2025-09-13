@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace TrainingGround
 {
     public class Employee : Person, IPrintable
@@ -7,12 +9,14 @@ namespace TrainingGround
         {
             this.EmployeeId = employeeId;
         }
-    
+
         public string EmployeeId { get; set; }
 
         public string GetPrintString()
         {
             return @$"{this.Name} ({this.EmployeeId}) {this.Address.Street} {this.Address.StreetNo} {this.Address.City}";
         }
+
+        public List<Address> Addresses { get; } = new();
     }
 }
