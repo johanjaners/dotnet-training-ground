@@ -73,7 +73,6 @@ public class LoopTests
     {
         // arrange
         var addressList = new List<Address>();
-
         addressList.Add(new Address() { Street = "street", StreetNo = 1 });
         addressList.Add(new Address() { Street = "street", StreetNo = 2 });
         addressList.Add(new Address() { Street = "street", StreetNo = 3 });
@@ -83,9 +82,32 @@ public class LoopTests
         foreach (Address address in addressList)
         {
             Console.WriteLine("'{ address.StreetNo}'");
-            
+
             // act
             Assert.IsType<Address>(address);
+        }
+
+    }
+
+
+    [Fact]
+    public void BreakStopsLoops()
+    {
+        // arrange
+        var addressList = new List<Address>();
+        addressList.Add(new Address() { Street = "street", StreetNo = 1 });
+        addressList.Add(new Address() { Street = "street", StreetNo = 2 });
+        addressList.Add(new Address() { Street = "street", StreetNo = 3 });
+
+        // act
+        var foundIt = false;
+        foreach (var currentValueInTheLoop in addressList)
+        {
+            if (currentValueInTheLoop.StreetNo == 2)
+            {
+                foundIt = true;
+                break; //stop iterating
+            }
         }
 
     }
