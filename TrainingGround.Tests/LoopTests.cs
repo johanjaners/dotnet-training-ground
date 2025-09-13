@@ -110,6 +110,8 @@ public class LoopTests
             }
         }
 
+        // assert
+        Assert.True(foundIt);
     }
 
 }
