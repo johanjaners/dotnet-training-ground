@@ -114,6 +114,27 @@ public class LoopTests
         Assert.True(foundIt);
     }
 
+    [Fact]
+    public void ContinueContinuesLoops()
+    {
+        // arrange
+        var addressList = new List<Address>();
+        addressList.Add(new Address() { Street = "street", StreetNo = 1 });
+        addressList.Add(new Address() { Street = "street", StreetNo = 2 });
+        addressList.Add(new Address() { Street = "street", StreetNo = 3 });
+        // act
+        var sum = 0;
+        foreach (var currentValueInTheLoop in addressList)
+        {
+            if (currentValueInTheLoop.StreetNo == 2)
+            {
+                continue;       // skip just this iteration
+            }
+            sum += currentValueInTheLoop.StreetNo; // runs for 1 and 3
+        }
+        // assert
+        Assert.Equal(4, sum);       // 1 + 3
+    }
 }
 
 
