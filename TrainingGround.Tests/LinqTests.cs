@@ -1,4 +1,5 @@
 namespace TrainingGround;
+
 public class LinqTests
 {
     [Fact]
@@ -20,7 +21,6 @@ public class LinqTests
         // assert
         Assert.Equal(4, numbersLargerThan15.Count);
     }
-
     [Fact]
     public void LinqToFilesNumbers()
     {
@@ -33,6 +33,33 @@ public class LinqTests
         // assert
         Assert.Equal(4, numbersLargerThan15.Count);
     }
+
+    [Fact]
+    public void LinqToFindFirst()
+    {
+        // arrange
+        var numbers = new List<int> { 1, 53, 2, 62, 2, 12, 17, 15, 16 };
+
+        // act
+        var firstNumberLargerThan15 = numbers.Find(numbers => numbers > 15);
+
+        // assert
+        Assert.Equal(53, firstNumberLargerThan15);
+    }
+
+    [Fact]
+    public void LinqToCheckIfAnyMatches()
+    {
+        // arrange
+        var numbers = new List<int> { 1, 53, 2, 62, 2, 12, 17, 15, 16 };
+
+        // act
+        var anyOver100 = numbers.Any(numbers => numbers > 100);
+
+        // assert
+        Assert.False(anyOver100);
+    }
+
 }
 
 
