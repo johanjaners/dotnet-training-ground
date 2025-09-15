@@ -60,6 +60,17 @@ public class LinqTests
         Assert.False(anyOver100);
     }
 
+    [Fact]
+    public void LinqToCheckIfAllMatches()
+    {
+        // arrange
+        var numbers = new List<int> { 1, 53, 2, 62, 2, 12, 17, 15, 16 };
+        // act
+        var allUnder100 = numbers.All(numbers => numbers < 100);
+        // assert
+        Assert.True(allUnder100);
+    }
+
 }
 
 
