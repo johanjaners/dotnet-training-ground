@@ -160,7 +160,7 @@ public class LinqTests
     }
 
     [Fact]
-    public void FilterPeopleByNameLengthAndSelect_ReturnsCorrectList_Query()
+    public void FilterPeopleByNameLengthAndSelect_ReturnsCorrectList_Query_syntax()
     {
         // arrange
         var a = new Person("Aaaron");
@@ -173,11 +173,13 @@ public class LinqTests
         };
 
         // act
-        var query =
+        var namesAndHeights =
+        (
             from p in people
             where p.Name.Length > 4
-            select new { Name = p.Name, Length = p.LengthInMeters };
-        var namesAndHeights = query.ToList();
+            select new { Name = p.Name, Length = p.LengthInMeters }
+        )
+        .ToList();
 
         // assert
         Assert.Equal(2, namesAndHeights.Count);
@@ -185,6 +187,37 @@ public class LinqTests
         Assert.Equal(1.96, namesAndHeights[0].Length);
     }
 
+    [Fact]
+    public void Queries_syntax_test()
+    {
+        // arrange
+        var a = new Person("Aaaron");
+        a.LengthInMeters = 1.96;
+        var people = new List<Person>{
+            a,
+            new Person("Bea"),
+            new Person("Ceasar"),
+            new Person("Dave"),
+        };
+
+        // act
+        var peopleWithLongNames =
+            from p in people
+            where p.Name.Length > 4
+            select new { Name = p.Name, Height = p.LengthInMeters };
+
+        var queryPeopleWithTwoAs =
+            from lp in peopleWithLongNames
+            where lp.Name.ToLower().StartsWith("aa")
+            select new { Name = lp.Name };
+
+        var longNamedAAPeopleList = queryPeopleWithTwoAs.ToList();
+
+        // assert
+        Assert.Equal(1, longNamedAAPeopleList.Count);
+        Assert.Equal("Aaaron", longNamedAAPeopleList[0].Name);
+
+    }
 }
 
 
