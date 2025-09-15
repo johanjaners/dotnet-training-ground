@@ -71,6 +71,28 @@ public class LinqTests
         Assert.True(allUnder100);
     }
 
+    [Fact]
+    public void FilterPeopleByNameLength_ReturnsCorrectList()
+    {
+        // arrange
+        var people = new List<Person>
+        {
+            new Person("Aaaron"),
+            new Person("Bea"),
+            new Person("Ceasar"),
+            new Person("Dave")
+        };
+
+        // act
+        var allWithLongNames = people
+            .Where(p => p.Name.Length > 4)
+            .ToList();
+
+        // assert
+        Assert.Equal(2, allWithLongNames.Count);
+        Assert.Equal("Aaaron", allWithLongNames[0].Name);
+    }
+
 }
 
 
