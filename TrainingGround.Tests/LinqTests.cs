@@ -156,7 +156,33 @@ public class LinqTests
         // assert
         Assert.Equal(1, asc[0]);
         Assert.Equal(62, desc[0]);
-    
+
+    }
+
+    [Fact]
+    public void FilterPeopleByNameLengthAndSelect_ReturnsCorrectList_Query()
+    {
+        // arrange
+        var a = new Person("Aaaron");
+        a.LengthInMeters = 1.96;
+        var people = new List<Person>{
+            a,
+            new Person("Bea"),
+            new Person("Ceasar"),
+            new Person("Dave"),
+        };
+
+        // act
+        var query =
+            from p in people
+            where p.Name.Length > 4
+            select new { Name = p.Name, Length = p.LengthInMeters };
+        var namesAndHeights = query.ToList();
+
+        // assert
+        Assert.Equal(2, namesAndHeights.Count);
+        Assert.Equal("Aaaron", namesAndHeights[0].Name);
+        Assert.Equal(1.96, namesAndHeights[0].Length);
     }
 
 }
