@@ -40,5 +40,5 @@ public class Person : IPrintable
     public double LengthInMeters { get; set; }
 
     // ---COmposition : Person HAS An Adress
-    public Address Address { get; set; }
+    public Address? Address { get; set; }
 }
