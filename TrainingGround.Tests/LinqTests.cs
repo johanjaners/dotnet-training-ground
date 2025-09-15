@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace TrainingGround;
 
 public class LinqTests
@@ -141,6 +143,21 @@ public class LinqTests
         Assert.Equal(1.96, namesAndHeights[0].Length);
     }
 
+    [Fact]
+    public void OrderByTestLINQ()
+    {
+        // arrange
+        var numbers = new List<int> { 1, 53, 2, 62, 2, 12, 17, 15, 16 };
+
+        // act
+        var asc = numbers.OrderBy(n => n).ToList();
+        var desc = numbers.OrderByDescending(n => n).ToList();
+
+        // assert
+        Assert.Equal(1, asc[0]);
+        Assert.Equal(62, desc[0]);
+    
+    }
 
 }
 
