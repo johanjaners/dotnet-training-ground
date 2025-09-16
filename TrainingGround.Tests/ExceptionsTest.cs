@@ -39,6 +39,6 @@ public class ExceptionTest
             return;
         }
 
-        Assert.True(false);
+        Assert.True(false, "Expected exception didnt happen");
     }
 }
